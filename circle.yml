@@ -1,2 +1,6 @@
 general:
   build_dir: myfirstpyapp
+
+machine:
+  python:
+    version: 2.7.11
