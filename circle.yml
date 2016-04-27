@@ -4,3 +4,7 @@ general:
 machine:
   python:
     version: 2.7.11
+
+test:
+  override:
+    - python myfirstpytest.py
