@@ -9,3 +9,9 @@ test:
   override:
     - mkdir -p $CIRCLE_TEST_REPORTS/
     - nosetests myfirstnosetest.py --with-xunit --xunit-file=$CIRCLE_TEST_REPORTS/test_result.xml
+
+deployment:
+  staging:
+    branch: master
+    commands:
+      - gcloud -q preview app deploy app.yaml --promote --version=staging
