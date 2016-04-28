@@ -7,4 +7,5 @@ machine:
 
 test:
   override:
-    - python myfirstpytest.py
+    - mkdir -p $CIRCLE_TEST_REPORTS/
+    - nosetests myfirstnosetest.py --with-xunit --xunit-file=$CIRCLE_TEST_REPORTS/test_result.xml
